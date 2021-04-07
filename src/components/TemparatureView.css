@@ -1,5 +1,4 @@
 .root {
-  background:              rgba(255, 255, 255, 0.25);
   box-shadow:              0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter:         blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -8,6 +7,24 @@
   width: 400px;
   padding: 12px;
   height: 600px;
+}
+
+@media (prefers-color-scheme: light) {
+  .root.light {
+    background: rgba(255, 255, 255, 0.25);
+  }
+  .root.dark {
+    background: rgba(120, 120, 120, 0.25);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .root.light {
+    background: rgba(100, 100, 100, 0.5);
+  }
+  .root.dark {
+    background: rgba(0, 0, 0, 0.5);
+  }
 }
 .root .city {
   font-size: 16px;

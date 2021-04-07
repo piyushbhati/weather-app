@@ -1,10 +1,10 @@
 import {React, WeatherStore} from '@api'
 import "./TemparatureView.css"
 
-export const TemperatureView = ({store}: { store?: WeatherStore }) => {
+export const TemperatureView = ({store, className}: { store?: WeatherStore, className?: any }) => {
   return (
     <>
-      <div className={'root'}>
+      <div className={`root ${className}`}>
         <div className={'temparature'}>
           {store?.temparature} &#8451;
         </div>

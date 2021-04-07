@@ -20,7 +20,6 @@ const App = observer(({store}: { store?: WeatherStore }) => {
         }}/>
       </div>
       <div className={'App'}>
-
         <div className={`${theme}-scheme`}>
           <LoadingIndicator loading={store?.openAPI?.loading}/>
           <div className={'header'}>
@@ -30,7 +29,7 @@ const App = observer(({store}: { store?: WeatherStore }) => {
             </div>
           </div>
           <main className={'main'}>
-            <TemperatureView store={store}/>
+            <TemperatureView store={store} className={theme}/>
           </main>
         </div>
       </div>
