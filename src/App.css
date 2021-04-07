@@ -1,38 +1,74 @@
+@media (prefers-color-scheme: dark) {
+
+  .bg.dark-scheme {
+    background-image: linear-gradient(180deg, #3f3f45 5%, #373738 20%, #37393c 60%, #303233 90%);
+  }
+
+  .bg.light-scheme {
+    background-image: linear-gradient(180deg, #eaeaea 5%, #eee 20%, #eee 60%, #aeaeae 90%);
+  }
+  .light-scheme {
+    color: #333;
+  }
+  .dark-scheme {
+    color: #EEE;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .bg.light-scheme {
+    background-image: linear-gradient(180deg, #FFF 5%, #EEEEEE 20%, #EEEEEE 60%, #EEEEEE 95%)
+  }
+
+  .bg.dark-scheme {
+    background-image: linear-gradient(180deg, #BBB 5%, #AAA 20%, #AAA 60%, #AAA 95%)
+  }
+
+  .light-scheme {
+    color: #404040;
+  }
+
+  .dark-scheme {
+    color: #EEEEEE;
+  }
+}
+
+.main {
+  height:          800px;
+  display:         flex;
+  flex-direction:  column;
+  justify-content: center;
+  align-items:     center;
+}
+
+.bg {
+  position: absolute;
+  top:      0;
+  left:     0;
+  right:    0;
+  bottom:   0;
+  z-index: -3;
+}
+
+.theme {
+  margin: 0 8px;
+  text-transform: capitalize;
+}
+
+.header {
+  display:         flex;
+  align-items:     center;
+  justify-content: flex-end;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display:         flex;
+  font-size:       calc(4px + 2vmin);
+  padding:         8px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  flex:            1;
 }
